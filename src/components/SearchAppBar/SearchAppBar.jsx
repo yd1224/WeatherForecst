@@ -9,6 +9,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import css from "./SearchAppBar.module.css";
 
+const CustomizedAppBar = styled(AppBar)`
+  background-color: rgb(85, 84, 84);
+`;
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -54,7 +57,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function SearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar className={css.header} position="static">
+      <CustomizedAppBar className={css.header} position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -83,7 +86,7 @@ export default function SearchAppBar() {
             />
           </Search>
         </Toolbar>
-      </AppBar>
+      </CustomizedAppBar>
     </Box>
   );
 }
